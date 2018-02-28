@@ -6,7 +6,7 @@ let updateWidget = function(data) {
   // HINT:
   // Weather icons are provided for you. Sample URL: http://openweathermap.org/img/w/01d.png
   // The very last part ('01d.png') should be obtained from the weather information.
-  $('.card-text').text("It is " + data.main.temp + " degrees outside");
+  $('.card-text').text("It is " + Math.round(data.main.temp) + " degrees outside");
   $('.card-title').text(data.name);
   $('.card-img-top').attr('src', "http://openweathermap.org/img/w/"+data.weather[0].icon+".png");
 
